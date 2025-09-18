@@ -92,6 +92,22 @@
   </style>
 </head>
 <body>
+<script>
+  feather.replace();
+
+  const openBtn = document.getElementById('open-menu');
+  const closeBtn = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  openBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+</script>
+
   <!-- tsParticles Animation -->
   <div id="tsparticles"></div>
 
@@ -144,6 +160,12 @@
           <li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
           <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
         </ul>
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button id="open-menu" class="md:hidden text-white focus:outline-none">
+           <i data-feather="menu"></i>
+        </button>
+
+
       </nav>
     </div>
   </header>
