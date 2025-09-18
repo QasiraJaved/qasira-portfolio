@@ -90,6 +90,16 @@
   </style>
 </head>
 <body>
+  <script>
+  feather.replace();
+
+  const menuBtn = document.querySelector("button.md\\:hidden");
+  const nav = document.querySelector("nav.hidden");
+
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("hidden");
+  });
+</script>
   <!-- tsParticles Animation -->
   <div id="tsparticles"></div>
 
