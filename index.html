@@ -163,11 +163,81 @@
   <!-- About Section -->
   <section id="about" class="py-20 max-w-6xl mx-auto px-6 relative z-10">
     <h2 class="text-4xl font-bold golden-gradient text-center mb-10" data-aos="fade-up">About Me</h2>
-    <p class="text-lg text-gray-300 leading-relaxed text-center" data-aos="fade-up" data-aos-delay="200">
-      I'm pursuing my <span class="text-yellow-400">Bachelor of Science</span> in Computer Applications, Mathematics, and Physics.
-      Alongside, I'm learning Artificial Intelligence and Machine Learning with hands-on experience in Python, SQL, and visualization tools.
-    </p>
+    <div class="grid grid-cols-1 gap-8">
+      <div>
+        <p class="text-lg text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+          I'm pursuing my <span class="text-yellow-400">Bachelor of Science</span> in Computer Applications, Mathematics, and Physics.
+          Alongside, I'm learning Artificial Intelligence and Machine Learning with hands-on experience in Python, SQL, and visualization tools.
+        </p>
+      </div>
+    </div>
   </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-10 max-w-6xl mx-auto px-6 relative z-10">
+    <h2 class="text-4xl font-bold golden-gradient text-center mb-10" data-aos="fade-up">Education</h2>
+    <div class="p-6 rounded-xl golden-border mx-auto max-w-md" data-aos="fade-left">
+      <h3 class="text-xl font-semibold golden-gradient mb-4">Bachelor's of Science</h3>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-lg font-medium text-white">Barkatullah University</h4>
+          <p class="text-gray-400">2023 - 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navbar Update -->
+  <header class="fixed top-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-300"></div>
+          <div class="relative w-16 h-16 flex items-center justify-center bg-transparent">
+           <div class="flex items-center justify-center min-h-screen bg-transparent">
+  <svg viewBox="0 0 300 300" class="w-40 h-40">
+    <defs>
+      <!-- Golden gradient -->
+      <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFD700"/>
+        <stop offset="50%" stop-color="#D4AF37"/>
+        <stop offset="100%" stop-color="#FFD700"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Stylish Q -->
+    <text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" 
+          font-family="Georgia, serif" font-size="120" 
+          fill="url(#goldGradient)" 
+          stroke="#FFD700" stroke-width="3" opacity="0.9">
+      Q
+    </text>
+
+    <!-- Stylish J overlapped -->
+    <text x="52%" y="53%" text-anchor="middle" dominant-baseline="middle" 
+          font-family="Georgia, serif" font-size="73" 
+          fill="url(#goldGradient)" 
+          stroke="#FFD700" stroke-width="3">
+      J
+    </text>
+  </svg>
+</div>
+          </div>
+        </div>
+        <h1 class="text-2xl font-bold golden-gradient ml-4 transform hover:scale-105 transition-transform duration-300"></h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+          <li><a href="#education" class="hover:text-yellow-400">Education</a></li>
+          <li><a href="#experience" class="hover:text-yellow-400">Experience</a></li>
+          <li><a href="#skills" class="hover:text-yellow-400">Skills</a></li>
+          <li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
+          <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- Experience Section -->
 <section id="experience" class="py-20 bg-gray-900 relative z-10">
