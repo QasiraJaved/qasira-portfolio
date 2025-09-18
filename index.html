@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Qasira Javed - Data Analyst & AI/ML Enthusiast</title>
 
   <!-- Tailwind -->
@@ -148,13 +148,13 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative z-10" id="hero">
-    <h2 class="text-5xl md:text-6xl font-bold golden-gradient mb-4" data-aos="fade-up">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold golden-gradient mb-4" data-aos="fade-up">
       Data Analyst & AI/ML Enthusiast
     </h2>
-    <p class="max-w-2xl text-lg md:text-xl mb-6" data-aos="fade-up" data-aos-delay="200">
+    <p class="max-w-2xl text-base sm:text-lg md:text-xl mb-6 px-4" data-aos="fade-up" data-aos-delay="200">
       Hi, I'm <span class="text-yellow-400 font-semibold">Qasira Javed</span>, a passionate Data Analyst with skills in Machine Learning, AI, and Data Visualization.
     </p>
-    <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 px-4" data-aos="fade-up" data-aos-delay="400">
       <a href="#projects" class="btn-golden">View Projects</a>
       <a href="asset/DA Resume - Qasira Javed.pdf" download class="btn-golden">Download Resume</a>
     </div>
@@ -229,7 +229,7 @@
         </div>
         <h1 class="text-2xl font-bold golden-gradient ml-4 transform hover:scale-105 transition-transform duration-300"></h1>
       </div>
-      <nav>
+      <nav class="hidden md:block">
         <ul class="flex space-x-6 text-lg">
           <li><a href="#about" class="hover:text-yellow-400">About</a></li>
           <li><a href="#education" class="hover:text-yellow-400">Education</a></li>
@@ -239,6 +239,9 @@
           <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
         </ul>
       </nav>
+      <button class="md:hidden text-white focus:outline-none">
+        <i data-feather="menu"></i>
+      </button>
     </div>
   </header>
 
