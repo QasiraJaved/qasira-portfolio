@@ -33,6 +33,18 @@
       overflow-x: hidden;
       margin: 0;
       padding: 0;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (max-width: 640px) {
+      .skill-card {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .btn-golden {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
     }
 
     /* Golden Gradient Text */
@@ -187,15 +199,17 @@
 
   <!-- Hero Section -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 relative z-10 pt-16 pb-16" id="hero">
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold golden-gradient mb-4" data-aos="fade-up">
-      Data Analyst & AI/ML Enthusiast
-    </h2>
-    <p class="max-w-2xl text-base md:text-lg lg:text-xl mb-6 px-4" data-aos="fade-up" data-aos-delay="200">
-      Hi, I'm <span class="text-yellow-400 font-semibold">Qasira Javed</span>, a passionate Data Analyst with skills in Machine Learning, AI, and Data Visualization.
-    </p>
-    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 px-4" data-aos="fade-up" data-aos-delay="400">
-      <a href="#projects" class="btn-golden">View Projects</a>
-      <a href="asset/DA Resume - Qasira Javed.pdf" download class="btn-golden">Download Resume</a>
+    <div class="w-full max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold golden-gradient mb-4" data-aos="fade-up">
+        Data Analyst & AI/ML Enthusiast
+      </h2>
+      <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 px-4" data-aos="fade-up" data-aos-delay="200">
+        Hi, I'm <span class="text-yellow-400 font-semibold">Qasira Javed</span>, a passionate Data Analyst with skills in Machine Learning, AI, and Data Visualization.
+      </p>
+      <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 px-4" data-aos="fade-up" data-aos-delay="400">
+        <a href="#projects" class="btn-golden text-sm sm:text-base px-4 py-2">View Projects</a>
+        <a href="asset/DA Resume - Qasira Javed.pdf" download class="btn-golden text-sm sm:text-base px-4 py-2">Download Resume</a>
+      </div>
     </div>
   </section>
 
@@ -326,10 +340,10 @@
 
 
   <!-- Skills Section -->
-  <section id="skills" class="py-16 md:py-20 relative z-10">
-    <div class="max-w-6xl mx-auto px-4 md:px-6">
-      <h2 class="text-3xl md:text-4xl font-bold golden-gradient text-center mb-8 md:mb-12" data-aos="fade-up">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+  <section id="skills" class="py-12 md:py-16 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold golden-gradient text-center mb-6 sm:mb-10" data-aos="fade-up">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
         <div class="skill-card" data-aos="zoom-in"><i data-feather="database" class="mx-auto mb-2"></i><p>SQL & Databases</p></div>
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="100"><i data-feather="bar-chart-2" class="mx-auto mb-2"></i><p>Power BI & Data Visualization</p></div>
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="200"><i data-feather="cpu" class="mx-auto mb-2"></i><p>Machine Learning</p></div>
@@ -352,8 +366,8 @@
   <div class="max-w-6xl mx-auto px-6">
 
     <!-- Power BI Projects -->
-<h3 class="text-2xl font-semibold text-white mt-20 mb-8 text-center" data-aos="fade-up">Power BI Projects</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<h3 class="text-xl sm:text-2xl font-semibold text-white mt-12 sm:mt-16 mb-6 sm:mb-8 text-center" data-aos="fade-up">Power BI Projects</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
 
   <!-- E-commerce Analytics -->
   <div class="p-6 rounded-xl golden-border golden-hover bg-transparent" data-aos="flip-left" data-aos-delay="200">
@@ -489,14 +503,14 @@
 
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 md:py-20 relative z-10">
-    <div class="max-w-6xl mx-auto px-4 md:px-6">
-      <h2 class="text-4xl font-bold golden-gradient text-center mb-6" data-aos="fade-up">Contact Me</h2>
-      <p class="text-gray-300 text-center mb-12" data-aos="fade-up" data-aos-delay="200">
+  <section id="contact" class="py-12 sm:py-16 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold golden-gradient text-center mb-4 sm:mb-6" data-aos="fade-up">Contact Me</h2>
+      <p class="text-sm sm:text-base text-gray-300 text-center mb-8 sm:mb-10" data-aos="fade-up" data-aos-delay="200">
         Feel free to reach out for collaborations or opportunities.
       </p>
       
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
         <!-- Contact Form -->
         <!-- Contact Form -->
         <div class="p-8 rounded-xl golden-border" data-aos="fade-right">
