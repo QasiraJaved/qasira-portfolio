@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qasira Javed - Data Analyst & AI/ML Enthusiast</title>
 
   <!-- Tailwind -->
@@ -31,6 +31,8 @@
       scroll-behavior: smooth;
       position: relative;
       overflow-x: hidden;
+      margin: 0;
+      padding: 0;
     }
 
     /* Golden Gradient Text */
@@ -90,27 +92,17 @@
   </style>
 </head>
 <body>
-  <script>
-  feather.replace();
-
-  const menuBtn = document.querySelector("button.md\\:hidden");
-  const nav = document.querySelector("nav.hidden");
-
-  menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("hidden");
-  });
-</script>
   <!-- tsParticles Animation -->
   <div id="tsparticles"></div>
 
   <!-- Navbar -->
   <header class="fixed top-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
       <div class="flex items-center">
         <div class="relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-300"></div>
-          <div class="relative w-16 h-16 flex items-center justify-center bg-transparent">
-           <div class="flex items-center justify-center min-h-screen bg-transparent">
+          <div class="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-transparent">
+           <div class="flex items-center justify-center bg-transparent">
   <svg viewBox="0 0 300 300" class="w-40 h-40">
     <defs>
       <!-- Golden gradient -->
@@ -156,12 +148,27 @@
     </div>
   </header>
 
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black bg-opacity-90 z-40 hidden">
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="#about" class="text-2xl text-white hover:text-yellow-400">About</a>
+      <a href="#education" class="text-2xl text-white hover:text-yellow-400">Education</a>
+      <a href="#experience" class="text-2xl text-white hover:text-yellow-400">Experience</a>
+      <a href="#skills" class="text-2xl text-white hover:text-yellow-400">Skills</a>
+      <a href="#projects" class="text-2xl text-white hover:text-yellow-400">Projects</a>
+      <a href="#contact" class="text-2xl text-white hover:text-yellow-400">Contact</a>
+      <button id="close-menu" class="absolute top-6 right-6 text-white">
+        <i data-feather="x"></i>
+      </button>
+    </div>
+  </div>
+
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative z-10" id="hero">
-    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold golden-gradient mb-4" data-aos="fade-up">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 relative z-10 pt-16 pb-16" id="hero">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold golden-gradient mb-4" data-aos="fade-up">
       Data Analyst & AI/ML Enthusiast
     </h2>
-    <p class="max-w-2xl text-base sm:text-lg md:text-xl mb-6 px-4" data-aos="fade-up" data-aos-delay="200">
+    <p class="max-w-2xl text-base md:text-lg lg:text-xl mb-6 px-4" data-aos="fade-up" data-aos-delay="200">
       Hi, I'm <span class="text-yellow-400 font-semibold">Qasira Javed</span>, a passionate Data Analyst with skills in Machine Learning, AI, and Data Visualization.
     </p>
     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 px-4" data-aos="fade-up" data-aos-delay="400">
@@ -171,7 +178,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 max-w-6xl mx-auto px-6 relative z-10">
+  <section id="about" class="py-16 md:py-20 max-w-6xl mx-auto px-4 md:px-6 relative z-10">
     <h2 class="text-4xl font-bold golden-gradient text-center mb-10" data-aos="fade-up">About Me</h2>
     <div class="grid grid-cols-1 gap-8">
       <div>
@@ -240,7 +247,7 @@
         <h1 class="text-2xl font-bold golden-gradient ml-4 transform hover:scale-105 transition-transform duration-300"></h1>
       </div>
       <nav class="hidden md:block">
-        <ul class="flex space-x-6 text-lg">
+        <ul class="flex space-x-4 md:space-x-6 text-base md:text-lg">
           <li><a href="#about" class="hover:text-yellow-400">About</a></li>
           <li><a href="#education" class="hover:text-yellow-400">Education</a></li>
           <li><a href="#experience" class="hover:text-yellow-400">Experience</a></li>
@@ -249,14 +256,14 @@
           <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
         </ul>
       </nav>
-      <button class="md:hidden text-white focus:outline-none">
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
         <i data-feather="menu"></i>
       </button>
     </div>
   </header>
 
   <!-- Experience Section -->
-<section id="experience" class="py-20 bg-gray-900 relative z-10">
+<section id="experience" class="py-16 md:py-20 bg-gray-900 relative z-10">
   <!-- Particle Background -->
   <div id="particles-experience" class="absolute top-0 left-0 w-full h-full -z-10"></div>
 
@@ -297,10 +304,10 @@
 
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 relative z-10">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold golden-gradient text-center mb-12" data-aos="fade-up">Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <section id="skills" class="py-16 md:py-20 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <h2 class="text-3xl md:text-4xl font-bold golden-gradient text-center mb-8 md:mb-12" data-aos="fade-up">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         <div class="skill-card" data-aos="zoom-in"><i data-feather="database" class="mx-auto mb-2"></i><p>SQL & Databases</p></div>
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="100"><i data-feather="bar-chart-2" class="mx-auto mb-2"></i><p>Power BI & Data Visualization</p></div>
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="200"><i data-feather="cpu" class="mx-auto mb-2"></i><p>Machine Learning</p></div>
@@ -460,14 +467,14 @@
 
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 relative z-10">
-    <div class="max-w-6xl mx-auto px-6">
+  <section id="contact" class="py-16 md:py-20 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
       <h2 class="text-4xl font-bold golden-gradient text-center mb-6" data-aos="fade-up">Contact Me</h2>
       <p class="text-gray-300 text-center mb-12" data-aos="fade-up" data-aos-delay="200">
         Feel free to reach out for collaborations or opportunities.
       </p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
         <!-- Contact Form -->
         <!-- Contact Form -->
         <div class="p-8 rounded-xl golden-border" data-aos="fade-right">
@@ -588,63 +595,100 @@
 
 
 <script>
-AOS.init();
-feather.replace();
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+    duration: 600,
+    once: true
+  });
+  feather.replace();
+  
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
+  
+  mobileMenuButton.addEventListener('click', function() {
+    mobileMenu.classList.remove('hidden');
+    feather.replace();
+  });
+  
+  closeMenu.addEventListener('click', function() {
+    mobileMenu.classList.add('hidden');
+  });
+  
+  // Close menu when clicking on a link
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  
+  // Adjust particle density for mobile
+  const isMobile = window.innerWidth < 768;
+  
+  // Hero Section
+  tsParticles.load("tsparticles", {
+    fullScreen: { enable: true },
+    background: { color: "#000000" },
+    fpsLimit: 60,
+    interactivity: {
+      events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } },
+      modes: { repulse: { distance: 150 }, push: { quantity: 4 } }
+    },
+    particles: {
+      number: { value: isMobile ? 80 : 120, density: { enable: true, area: 900 } },
+      color: { value: "#B8860B" },
+      shape: { type: ["circle"] },
+      opacity: { value: 0.8, random: true },
+      size: { value: { min: 2, max: 6 }, animation: { enable: true, speed: 3, minimumValue: 2 } },
+      move: { enable: true, speed: { min: 0.5, max: 1.5 }, direction: "none", random: true, straight: false },
+      links: { enable: true, distance: 130, color: "#B8860B", opacity: 0.35, width: 1.5 },
+      trail: { enable: true, length: 3, fillColor: "#000000" }
+    },
+    detectRetina: true
+  });
 
-// Hero Section
-tsParticles.load("tsparticles", {
-  fullScreen: { enable: true },
-  background: { color: "#000000" },
-  fpsLimit: 60,
-  interactivity: {
-    events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } },
-    modes: { repulse: { distance: 150 }, push: { quantity: 4 } }
-  },
-  particles: {
-    number: { value: 120, density: { enable: true, area: 900 } },
-    color: { value: "#B8860B" }, // Dark Yellow circles
-    shape: { type: ["circle"] },
-    opacity: { value: 0.8, random: true },
-    size: { value: { min: 2, max: 6 }, animation: { enable: true, speed: 3, minimumValue: 2 } },
-    move: { enable: true, speed: { min: 0.5, max: 1.5 }, direction: "none", random: true, straight: false },
-    links: { enable: true, distance: 130, color: "#B8860B", opacity: 0.35, width: 1.5 }, // Dark Yellow links
-    trail: { enable: true, length: 3, fillColor: "#000000" }
-  },
-  detectRetina: true
-});
+  // Experience Section
+  tsParticles.load("particles-experience", {
+    fullScreen: { enable: false },
+    background: { color: "#000000" },
+    fpsLimit: 60,
+    interactivity: { events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } } },
+    particles: {
+      number: { value: isMobile ? 50 : 70, density: { enable: true, area: 700 } },
+      color: { value: "#B8860B" },
+      shape: { type: ["circle"] },
+      opacity: { value: 0.7, random: true },
+      size: { value: { min: 2, max: 5 }, animation: { enable: true, speed: 2, minimumValue: 2 } },
+      move: { enable: true, speed: 1, direction: "none", random: true },
+      links: { enable: true, distance: 100, color: "#B8860B", opacity: 0.25, width: 1.2 }
+    }
+  });
 
-// Experience Section
-tsParticles.load("particles-experience", {
-  fullScreen: { enable: false },
-  background: { color: "#000000" },
-  fpsLimit: 60,
-  interactivity: { events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } } },
-  particles: {
-    number: { value: 70, density: { enable: true, area: 700 } },
-    color: { value: "#B8860B" }, // Dark Yellow
-    shape: { type: ["circle"] },
-    opacity: { value: 0.7, random: true },
-    size: { value: { min: 2, max: 5 }, animation: { enable: true, speed: 2, minimumValue: 2 } },
-    move: { enable: true, speed: 1, direction: "none", random: true },
-    links: { enable: true, distance: 100, color: "#B8860B", opacity: 0.25, width: 1.2 } // Dark Yellow links
-  }
-});
-
-// Projects Section
-tsParticles.load("particles-projects", {
-  fullScreen: { enable: false },
-  background: { color: "#000000" },
-  fpsLimit: 60,
-  interactivity: { events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } } },
-  particles: {
-    number: { value: 70, density: { enable: true, area: 700 } },
-    color: { value: "#B8860B" }, // Dark Yellow
-    shape: { type: ["circle"] },
-    opacity: { value: 0.7, random: true },
-    size: { value: { min: 2, max: 5 }, animation: { enable: true, speed: 2, minimumValue: 2 } },
-    move: { enable: true, speed: 1, direction: "none", random: true },
-    links: { enable: true, distance: 100, color: "#B8860B", opacity: 0.25, width: 1.2 } // Dark Yellow links
-  }
+  // Projects Section
+  tsParticles.load("particles-projects", {
+    fullScreen: { enable: false },
+    background: { color: "#000000" },
+    fpsLimit: 60,
+    interactivity: { events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } } },
+    particles: {
+      number: { value: isMobile ? 50 : 70, density: { enable: true, area: 700 } },
+      color: { value: "#B8860B" },
+      shape: { type: ["circle"] },
+      opacity: { value: 0.7, random: true },
+      size: { value: { min: 2, max: 5 }, animation: { enable: true, speed: 2, minimumValue: 2 } },
+      move: { enable: true, speed: 1, direction: "none", random: true },
+      links: { enable: true, distance: 100, color: "#B8860B", opacity: 0.25, width: 1.2 }
+    }
+  });
+  
+  // Responsive adjustments on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
 });
 
 </script>
